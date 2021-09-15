@@ -6,9 +6,15 @@ import {
 } from '@material-ui/icons';
 import { Avatar } from '@material-ui/core';
 import { Button } from '@material-ui/core';
+import { useSelector } from 'react-redux';
+import { selectUser } from './features/userSlice';
+import { auth } from './firebase';
 
 
 function Navbar() {
+
+    const user = useSelector(selectUser);
+
     return (
         <div className="navbar">
             <div className="qHeader_logo">
@@ -44,7 +50,7 @@ function Navbar() {
 
             <div className="qHeader_Rem">
                 <div className="qHeader_avatar">
-                    <Avatar />
+                    <Avatar src={user.photo} onClick={() => auth.signOut()}/>
                 </div>
                 <Language />
                 <Button>Qeustion</Button>
