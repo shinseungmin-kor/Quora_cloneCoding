@@ -11,7 +11,7 @@ export const userSlice = createSlice({
       state.user = action.payload;
       // console.log(action.payload)
     },
-    
+
     logout: state => {
       state.user = null;
     },
@@ -27,4 +27,4 @@ export default userSlice.reducer;
 
 // export 는 한개의 선언에서 여러개를 다른 컴포넌트에서 import 해올 수 있다.
 // export defalt 는 오로지 한개의 모듈만을 가져올 수 있다.
- 
+ // 리듀스 개념정리가 필요하다
