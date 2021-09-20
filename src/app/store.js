@@ -6,6 +6,7 @@ export default configureStore({
   reducer: {
     user: userReducer,
     // question: questionReducer,
+    
   },
 });
 
